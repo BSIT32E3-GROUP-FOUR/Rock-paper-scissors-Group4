@@ -2,7 +2,107 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<head>
+    <style>
+        body {
+            background-color: #020202;
+            color: #FFFFFF;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            color: #fddb57;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        p {
+            color: #FFC5C5;
+        }
+
+        li {
+            color: #C7C8CC;
+            font-size: 10px; 
+            list-style-type: none;
+        }
+
+        .game-container {
+            margin-top: 50px;
+        }
+
+        .hand {
+            display: inline-block;
+            width: 150px;
+            height: 150px;
+            border: 2px solid #FFFFFF;
+            border-radius: 50%;
+            padding: 20px;
+            margin: 10px;
+        }
+
+        .player1-hand {
+            color: #7ed957;
+            border-color: #7ed957;
+        }
+
+        .player2-hand {
+            color: #ff5757;
+            border-color: #ff5757;
+        }
+
+        .hand-selection {
+            margin-top: 50px;
+        }
+
+        .game-status {
+            margin-top: 20px;
+            color: #DFCCFB;
+        }
+
+        .btn-rock {
+            background-color: #ed5481;
+            color: #FFFFFF;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin: 5px;
+            border-radius: 8px;
+        }
+
+        .btn-paper {
+            background-color: #fddb57;
+            color: #FFFFFF;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin: 5px;
+            border-radius: 8px;
+        }
+
+        .btn-scissor {
+            background-color: #83cbd8;
+            color: #FFFFFF;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin: 5px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<div class="game-container">
+    <h1>.</h1>
+    <div class="hand-selection">
+        <button class="btn-rock" onClick="RockOnClick('Rock')">Rock</button>
+        <button class="btn-paper" onClick="RockOnClick('Paper')">Paper</button>
+        <button class="btn-scissor" onClick="RockOnClick('Scissor')">Scissor</button>
+    </div>
+    <div class="game-status" id="GameStatus"></div>
+    <div class="hands">
+        <div class="hand player1-hand" id="PlayerHand">P1</div>
+        <div class="hand player2-hand" id="OpponentHand">P2</div>
+    </div>
 </div>
+
