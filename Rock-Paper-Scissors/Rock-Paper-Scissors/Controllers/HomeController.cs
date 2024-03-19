@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-using Rock_Paper_Scissors.Models;
+using RockPaperScissor_ASPCORE.Models;
 using System.Diagnostics;
 
-namespace Rock_Paper_Scissors.Controllers
+namespace RockPaperScissor_ASPCORE.Controllers
 {
     public class HomeController : Controller
     {
@@ -11,6 +11,11 @@ namespace Rock_Paper_Scissors.Controllers
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
+        }
+
+        public IActionResult StartGame()
+        {
+            return View();
         }
 
         public IActionResult Index()

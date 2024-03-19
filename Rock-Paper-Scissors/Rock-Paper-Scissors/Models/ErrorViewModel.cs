@@ -1,4 +1,4 @@
-namespace Rock_Paper_Scissors.Models
+namespace RockPaperScissor_ASPCORE.Models
 {
     public class ErrorViewModel
     {
