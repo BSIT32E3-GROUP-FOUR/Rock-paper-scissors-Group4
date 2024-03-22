@@ -1,0 +1,252 @@
+html {
+    font-size: 14px;
+  }
+  
+  @media (min-width: 768px) {
+    html {
+      font-size: 16px;
+    }
+  }
+  
+  .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+  }
+  
+  html {
+    position: relative;
+    min-height: 100%;
+  }
+  
+  body {
+    margin-bottom: 60px;
+  
+  }
+  
+  /* Game.cshtml */
+  
+  body {
+      background: #000;
+      background-size: cover;
+      font-family: Courier New, monospace;
+  }
+  
+  h1 {
+      font-family: Courier New, monospace;
+      position: relative;
+      background: linear-gradient(#e66465, #9198e5);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 32px;
+      text-align: center;
+      margin-top: 50px;
+  }
+  
+  h3 {
+      background: linear-gradient(to top, #6bd1c1, #4fd8bb, #32dfaf, #11e59f, #00ea8b, #00eb7e, #02ec70, #14ec60, #1cea5a, #23e854, #28e54e, #2de348);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+  }
+  
+  h4 {
+      background: linear-gradient(to top, #eb9a9a, #ed8b8d, #ef7b80, #f06b73, #f05867, #ee4c5f, #eb3f56, #e82f4e, #e32747, #de1e40, #d91239, #d40032);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+  }
+  
+  .score-board {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #FFFFFF;
+      border-radius: 10px;
+      padding: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  }
+  
+  .game-result,
+  .game-status {
+      color: #fffb00;
+      position: absolute;
+      bottom: 300px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      padding-top: 1px;
+      padding-bottom: 1px;
+  }
+  
+  .container {
+      position: relative;
+      padding-bottom: 100px;
+  }
+  
+  
+  .bn632-hover {
+      width: 160px;
+      bottom: 300px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #fff;
+      cursor: pointer;
+      margin: 20px;
+      height: 55px;
+      text-align: center;
+      border: none;
+      background-size: 300% 100%;
+      border-radius: 50px;
+      moz-transition: all .4s ease-in-out;
+      -o-transition: all .4s ease-in-out;
+      -webkit-transition: all .4s ease-in-out;
+      transition: all .4s ease-in-out;
+  }
+  
+      .bn632-hover:hover {
+          background-position: 100% 0;
+          moz-transition: all .4s ease-in-out;
+          -o-transition: all .4s ease-in-out;
+          -webkit-transition: all .4s ease-in-out;
+          transition: all .4s ease-in-out;
+      }
+  
+      .bn632-hover:focus {
+          outline: none;
+      }
+  
+      .bn632-hover.bn27 {
+          background-image: linear-gradient( to right, #ed6ea0, #ec8c69, #f7186a, #fbb03b );
+          box-shadow: 0 4px 15px 0 rgba(236, 116, 149, 0.75);
+      }
+  
+  
+  .bn632-hover {
+      width: 160px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #fff;
+      cursor: pointer;
+      margin: 20px;
+      height: 55px;
+      text-align: center;
+      border: none;
+      background-size: 300% 100%;
+      border-radius: 50px;
+      moz-transition: all .4s ease-in-out;
+      -o-transition: all .4s ease-in-out;
+      -webkit-transition: all .4s ease-in-out;
+      transition: all .4s ease-in-out;
+  }
+  
+      .bn632-hover:hover {
+          background-position: 100% 0;
+          moz-transition: all .4s ease-in-out;
+          -o-transition: all .4s ease-in-out;
+          -webkit-transition: all .4s ease-in-out;
+          transition: all .4s ease-in-out;
+      }
+  
+      .bn632-hover:focus {
+          outline: none;
+      }
+  
+      .bn632-hover.bn26 {
+          background-image: linear-gradient( to right, #25aae1, #4481eb, #04befe, #3f86ed );
+          box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+      }
+  
+  .bn632-hover {
+      width: 160px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #fff;
+      cursor: pointer;
+      margin: 20px;
+      height: 55px;
+      text-align: center;
+      border: none;
+      background-size: 300% 100%;
+      border-radius: 50px;
+      moz-transition: all .4s ease-in-out;
+      -o-transition: all .4s ease-in-out;
+      -webkit-transition: all .4s ease-in-out;
+      transition: all .4s ease-in-out;
+  }
+  
+      .bn632-hover:hover {
+          background-position: 100% 0;
+          moz-transition: all .4s ease-in-out;
+          -o-transition: all .4s ease-in-out;
+          -webkit-transition: all .4s ease-in-out;
+          transition: all .4s ease-in-out;
+      }
+  
+      .bn632-hover:focus {
+          outline: none;
+      }
+  
+      .bn632-hover.bn23 {
+          background-image: linear-gradient( to right, #009245, #fcee21, #00a8c5, #d9e021 );
+          box-shadow: 0 4px 15px 0 rgba(83, 176, 57, 0.75);
+      }
+  
+  .player-score, .opponent-score {
+      flex: 1;
+      text-align: center;
+  }
+  
+      .player-score h3, .opponent-score h4 {
+          margin-bottom: 0;
+      }
+  
+  
+  .hand-selection {
+      margin-top: 200px;
+      margin-bottom: 20px;
+      font-size: 32px;
+      display: flex;
+      justify-content: center;
+  }
+  
+      .hand-selection button {
+          background-color: transparent;
+          border: 1px solid #FFFFFF;
+          color: #FFFFFF;
+          padding: 10px 20px;
+          border-radius: 20px;
+          margin: 5px;
+          width: 130px;
+      }
+  
+  
+          .hand-selection button:hover {
+              background-color: rgba(255, 255, 255, 0.1);
+          }
+  
+  .PlayerHand, .OpponentHand {
+      border: none;
+      position: absolute;
+      bottom: 100%;
+      transform: translateY(100%);
+  }
+  
+  .PlayerHand {
+      left: 50%;
+  }
+  
+  .OpponentHand {
+      right: 50%;
+  }
+  
+  .PlayerHand {
+      background: linear-gradient(to top, #6bd1c1, #4fd8bb, #32dfaf, #11e59f, #00ea8b, #00eb7e, #02ec70, #14ec60, #1cea5a, #23e854, #28e54e, #2de348);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+  }
+  
+  .OpponentHand {
+      background: linear-gradient(to top, #eb9a9a, #ed8b8d, #ef7b80, #f06b73, #f05867, #ee4c5f, #eb3f56, #e82f4e, #e32747, #de1e40, #d91239, #d40032);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+  }
+  

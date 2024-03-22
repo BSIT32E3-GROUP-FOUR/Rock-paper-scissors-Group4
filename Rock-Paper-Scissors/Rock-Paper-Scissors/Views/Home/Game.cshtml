@@ -1,0 +1,60 @@
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/game.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="score-board">
+            <div class="player-score">
+                <h3>Player 1</h3>
+                <p id="PlayerPoint">0</p>
+            </div>
+            <div class="opponent-score">
+                <h4>Player 2</h4>
+                <p id="EnemyPoint">0</p>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <h1>Rock, Paper and Scissor Game!</h1>
+            <div class="row">
+                <div class="col">
+                    <div class="PlayerHand">
+                        <p id="PlayerHand">Player 1</p>
+                        <img id="PlayerHandImage" />
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="OpponentHand">
+                        <p id="OpponentHand">Player 2</p>
+                        <img id="OpponentHandImage" />
+                    </div>
+                </div>
+            </div>
+            <div class="hand-selection">
+                <button id="Rock" class="bn632-hover bn27"  onClick="RockOnClick('Rock')">Rock</button>
+                <button id="Paper" class="bn632-hover bn26" onClick="RockOnClick('Paper')">Paper</button>
+                <button id="Scissor" class="bn632-hover bn23" onClick="RockOnClick('Scissor')">Scissor</button>
+            </div>
+            <div class="game-result">
+                <p id="GameResult"></p>
+            </div>
+        </div>
+        <div class="game-status">
+            <p id="GameStatus"></p>
+        </div>
+    </div>
+
+    <script src="~/js/site.js"></script>
+</body>
+</html>
