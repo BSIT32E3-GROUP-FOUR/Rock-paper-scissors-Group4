@@ -13,17 +13,22 @@ namespace RockPaperScissor_ASPCORE.Controllers
             _logger = logger;
         }
 
-        public IActionResult StartGame()
-        {
-            return View();
-        }
-
         public IActionResult Index()
         {
             return View();
         }
 
         public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        public IActionResult Game()
+        {
+            return View();
+        }
+
+        public IActionResult GameOver()
         {
             return View();
         }
