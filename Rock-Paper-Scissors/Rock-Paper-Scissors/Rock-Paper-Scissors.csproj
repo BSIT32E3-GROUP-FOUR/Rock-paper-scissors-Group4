@@ -7,4 +7,8 @@
     <RootNamespace>Rock_Paper_Scissors</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\Avatars\" />
+  </ItemGroup>
+
 </Project>
