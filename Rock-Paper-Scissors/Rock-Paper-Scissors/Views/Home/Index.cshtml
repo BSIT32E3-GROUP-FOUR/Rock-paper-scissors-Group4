@@ -5,6 +5,7 @@
 <head>
     <script src="~/js/MainMenu.js"></script>
     <link rel="stylesheet" href="~/css/site.css" />
+
 </head>
 
 <body>
@@ -16,10 +17,16 @@
             <p class="instruction-line">Whenever you click any bet (Rock | Paper | Scissor), the Enemy (Player 2) is computerized to click its bet anonymously.</p>
             <p class="instruction-line">First to win 3 rounds, WINS the Game.</p>
             <p class="instruction-line">Good Luck!</p>
-            <br><br><br> 
-            <a asp-area="" asp-controller="Home" asp-action="Game">
-                <button class="glow-on-hover" type="button">I'M READY!</button>
+            <br><br><br>
+            <div id="username" class="name">
+                <p>Please enter your username:</p>
+                <input type="text" id="username-input" placeholder="Enter your username">
+
+            </div>
+            <a asp-area="" asp-controller="Home" asp-action="pickAvatar">
+                <button class="glow-on-hover" type="button">NEXT</button>
             </a>
         </div>
+       
     </div>
 </body>

@@ -8,7 +8,7 @@
 
 
 let selectedType = "";
-
+let gameRecords = [];
 var playerImage = document.getElementById("PlayerHandImage");
 
 playerImage.width = 120;
@@ -49,47 +49,52 @@ function EnemyPick() {
     const type = ["Rock", "Paper", "Scissor"];
     const imgType = ["RockTT.png", "PaperT.png", "ScissorT.png"];
 
-    result = type[index]
-    document.getElementById("OpponentHand").innerHTML = result
+    const enemyPick = type[index];
+    const playerPick = selectedType;
+
+    document.getElementById("OpponentHand").innerHTML = enemyPick;
     document.getElementById("OpponentHandImage").src = `../imgs/${imgType[index]}`;
 
-    if (result === selectedType) {
-        document.getElementById("GameStatus").innerHTML = "Tie!";
-    }
-    else if (result === "Rock" && selectedType === "Scissor") {
-        document.getElementById("GameStatus").innerHTML = "Enemy Wins!";
+    let resultMessage = "";
+    let winner = "";
+
+    if (enemyPick === playerPick) {
+        resultMessage = "Tie!";
+        winner = "Tie";
+    } else if (
+        (enemyPick === "Rock" && playerPick === "Scissor") ||
+        (enemyPick === "Paper" && playerPick === "Rock") ||
+        (enemyPick === "Scissor" && playerPick === "Paper")
+    ) {
+        resultMessage = "Enemy Wins!";
+        winner = "Enemy";
         ePoint++;
-    }
-    else if (result === "Rock" && selectedType === "Paper") {
-        document.getElementById("GameStatus").innerHTML = "Player Wins!";
+    } else {
+        resultMessage = "Player Wins!";
+        winner = "Player";
         pPoint++;
-    }
-    else if (result === "Paper" && selectedType === "Scissor") {
-        document.getElementById("GameStatus").innerHTML = "Player Wins!";
-        pPoint++;
-    }
-    else if (result === "Paper" && selectedType === "Rock") {
-        document.getElementById("GameStatus").innerHTML = "Enemy Wins!";
-        ePoint++;
-    }
-    else if (result === "Scissor" && selectedType === "Rock") {
-        document.getElementById("GameStatus").innerHTML = "Player Wins!";
-        pPoint++;
-    }
-    else if (result === "Scissor" && selectedType === "Paper") {
-        document.getElementById("GameStatus").innerHTML = "Enemy Wins!";
-        ePoint++;
     }
 
-    if (ePoint === 3 || pPoint === 3) {
-        window.location.href = "GameOver";
+    // Update the game records
+    gameRecords.push({
+        round: gameRecords.length + 1,
+        playerPick,
+        enemyPick,
+        winner,
+    });
+
+    document.getElementById("GameStatus").innerHTML = resultMessage;
+
+    if (ePoint === 5 || pPoint === 5) {
+        // Pass the gameRecords to the GameOver page via query parameter
+        const queryParams = new URLSearchParams({ records: JSON.stringify(gameRecords) });
+        window.location.href = `GameOver?${queryParams.toString()}`;
     }
 
     document.getElementById("EnemyPoint").innerHTML = String(ePoint);
     document.getElementById("PlayerPoint").innerHTML = String(pPoint);
 
     var OpponentImage = document.getElementById("OpponentHandImage");
-
-    OpponentImage.width = 120; 
+    OpponentImage.width = 120;
     OpponentImage.height = 120;
 }
