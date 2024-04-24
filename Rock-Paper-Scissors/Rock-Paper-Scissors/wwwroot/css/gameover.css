@@ -36,6 +36,7 @@ html {
   
   .container {
       text-align: center;
+
   }
   
   #OverallWinner {
@@ -88,3 +89,4 @@ html {
           .button:hover .text {
               background-image: linear-gradient(-45deg, #4568dc, #b06ab3);
           }
+
